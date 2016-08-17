@@ -8,6 +8,5 @@ ENV RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS "-pa /plugins/rabbitmq_clusterer.ez/rabb
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates wget && rm -rf /var/lib/apt/lists/* \
     && wget -O /plugins/rabbitmq_clusterer.ez "https://www.rabbitmq.com/community-plugins/v3.6.x/rabbitmq_clusterer-${RABBITMQ_CLUSTERER_VERSION}.ez" \
+    && rabbitmq-plugins enable rabbitmq_clusterer --offline \
     && apt-get purge -y --auto-remove ca-certificates wget
-
-RUN rabbitmq-plugins enable rabbitmq_clusterer --offline
