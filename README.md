@@ -1,3 +1,9 @@
 # docker-rabbitmq-clusterer
 
-RabbitMQ + rabbitmq_clusterer
+RabbitMQ + Plugins
+
+Currently the following plugins are enabled:
+
+- rabbitmq_clusterer
+- rabbitmq_shovel
+- rabbitmq_shovel_management
